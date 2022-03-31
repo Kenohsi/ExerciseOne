@@ -11,8 +11,8 @@ import java.util.List;
 public class AppController implements Shape {
     private List<Article> articles;
     public String query = "Bitcoin";
-    public Label Textblabla;
 
+    public Label Labelone;
     public AppController() {
         this.articles = generateMockList();
     }

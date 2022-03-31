@@ -3,18 +3,19 @@ package at.ac.fhcampuswien;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class NewsAppFx extends AppController {
-public Label Textblabla;
 
+
+   public Label Labelonee;
    private AppController controller = new AppController();
    private List<Article> articles = new ArrayList<Article>();
 
@@ -54,8 +55,16 @@ public Label Textblabla;
  //  }
 
    public void BitcoinNews(ActionEvent actionEvent) {
-      Text.setText("asdfsdf");
-      controller.
+     Labelonee.setText(getAllNewsBitcoin().toString());
+
+   }
+   public void AllNews(ActionEvent actionEvent) {
+      Labelonee.setText(getTopHeadlinesAustria().toString());
+
+   }
+   public void ArticleCount(ActionEvent actionEvent) {
+      Labelonee.setText("At the time we count 3 articles");
+
    }
 
 
