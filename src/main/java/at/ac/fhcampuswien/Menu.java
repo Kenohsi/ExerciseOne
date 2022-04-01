@@ -37,7 +37,10 @@ public class Menu {
                 start();
             }
 
-            case ("q") -> printExitMessage();
+            case ("q") -> {
+                printExitMessage();
+                System.exit(0);
+            }
             default -> {
                 printInvalidInputMessage();
                 start();
