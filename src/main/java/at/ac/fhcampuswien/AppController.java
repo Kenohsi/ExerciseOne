@@ -53,7 +53,7 @@ public class AppController implements Shape {
         return rem_article;
     }
 
-    private static List<Article> generateMockList() {
+    public static List<Article> generateMockList() {
         List<Article> articles = new ArrayList();
         Article one = new Article("Steve Rosenberg ", "Ukraine war: Russians grieve for fallen soldiers");
         articles.add(one);

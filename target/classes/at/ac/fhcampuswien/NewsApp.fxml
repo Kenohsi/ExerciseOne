@@ -14,7 +14,7 @@
                     <items>
                         <AnchorPane prefHeight="384.0" prefWidth="536.0">
                             <children>
-                                <ImageView fx:id="Background" fitHeight="457.0" fitWidth="1210.0" >
+                                <ImageView fx:id="Background" fitHeight="457.0" fitWidth="1210.0">
                                     <image>
                                         <Image url="@download.jpg" />
                                     </image>
@@ -31,17 +31,17 @@
                         </Label>
                               <AnchorPane layoutX="6.0" minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="158.0">
                                   <children>
-                                      <Button fx:id="Headlines" layoutX="2.0" layoutY="77.0" mnemonicParsing="false" onAction="#AllNews" prefHeight="62.0" prefWidth="154.0" text="Headlines" textFill="RED" textOverrun="CENTER_WORD_ELLIPSIS">
+                                      <Button fx:id="Headlines" layoutX="2.0" layoutY="151.0" mnemonicParsing="false" onAction="#AllNews" prefHeight="62.0" prefWidth="154.0" text="Headlines" textFill="RED" textOverrun="CENTER_WORD_ELLIPSIS">
                                           <font>
                                               <Font name="Arial Rounded MT Bold" size="18.0" />
                                           </font>
                                       </Button>
-                                      <Button fx:id="BitcoinButton" layoutX="2.0" layoutY="177.0" mnemonicParsing="false" onAction="#BitcoinNews" prefHeight="62.0" prefWidth="154.0" text="Bitcoin News" textFill="RED">
+                                      <Button fx:id="BitcoinButton" layoutX="2.0" layoutY="251.0" mnemonicParsing="false" onAction="#BitcoinNews" prefHeight="62.0" prefWidth="154.0" text="Bitcoin News" textFill="RED">
                                           <font>
                                               <Font name="Arial Rounded MT Bold" size="18.0" />
                                           </font>
                                       </Button>
-                                      <Button fx:id="ArticleCount1" layoutX="2.0" layoutY="284.0" mnemonicParsing="false" onAction="#ArticleCount" prefHeight="62.0" prefWidth="154.0" text="Article Count" textFill="RED">
+                                      <Button fx:id="ArticleCount1" layoutX="2.0" layoutY="358.0" mnemonicParsing="false" onAction="#ArticleCount" prefHeight="62.0" prefWidth="154.0" text="Article Count" textFill="RED">
                                           <font>
                                               <Font name="Arial Rounded MT Bold" size="18.0" />
                                           </font>
@@ -49,6 +49,13 @@
                                     <Blend mode="LIGHTEN" />
                                  </effect>
                                       </Button>
+                              <TextArea fx:id="filter" layoutX="2.0" layoutY="51.0" prefHeight="38.0" prefWidth="154.0" />
+                              <Label layoutX="20.0" layoutY="14.0" prefHeight="26.0" prefWidth="118.0" text="Search-Filter" textFill="RED">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="searchButton" layoutX="42.0" layoutY="89.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="38.0" prefWidth="74.0" text="Search" textFill="RED" />
                                   </children>
                               </AnchorPane>
                             </children>
