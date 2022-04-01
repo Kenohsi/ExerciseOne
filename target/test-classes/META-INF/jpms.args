@@ -1,4 +1,0 @@
---patch-module
-com.example.exerasixc=_
---add-reads
-com.example.exerasixc=ALL-UNNAMED

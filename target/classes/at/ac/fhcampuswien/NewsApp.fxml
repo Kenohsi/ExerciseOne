@@ -49,24 +49,12 @@
                                     <Blend mode="LIGHTEN" />
                                  </effect>
                                       </Button>
-                              <TextArea fx:id="filter" layoutX="2.0" layoutY="51.0" prefHeight="38.0" prefWidth="154.0" />
-                              <Label layoutX="20.0" layoutY="14.0" prefHeight="26.0" prefWidth="118.0" text="Search-Filter" textFill="RED">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="searchButton" layoutX="42.0" layoutY="89.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="38.0" prefWidth="74.0" text="Search" textFill="RED" />
                                   </children>
                               </AnchorPane>
                             </children>
                         </AnchorPane>
                     </items>
                 </SplitPane>
-                <Button fx:id="Quit" layoutX="1062.0" layoutY="419.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="138.0" text="Quit" textFill="#110eab">
-                    <font>
-                        <Font name="Calibri Bold Italic" size="16.0" />
-                    </font>
-                </Button>
                 <ImageView fx:id="ArticlesPics" fitHeight="92.0" fitWidth="124.0" layoutX="1069.0" layoutY="8.0">
                     <image>
                         <Image url="@Articles.png" />

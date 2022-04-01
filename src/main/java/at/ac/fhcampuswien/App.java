@@ -18,13 +18,16 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("NewsApp.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 420);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 1213, 459);
+        stage.setTitle("NewsApp from NetSquad!");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch(args);
+        launch(args);/*
+        Menu menu = new Menu();
+        menu.start();
+        */
     }
 }
