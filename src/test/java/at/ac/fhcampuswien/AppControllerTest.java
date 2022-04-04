@@ -1,18 +1,10 @@
 package at.ac.fhcampuswien;
 
-
 import org.junit.jupiter.api.*;
-
-import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
-
-
 public class AppControllerTest {
-    private PrintStream originalOut;
-    private InputStream originalIn;
 
     @BeforeAll
     public static void begin() {
@@ -22,25 +14,6 @@ public class AppControllerTest {
     @AfterAll
     public static void finish() {
         System.out.println("Testing NewsApp from NetSquad Finished");
-    }
-
-    @BeforeEach
-    public void beforeEach() throws IOException {
-        originalOut = System.out;
-        originalIn = System.in;
-
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(bos));
-
-        PipedOutputStream pos = new PipedOutputStream();
-        PipedInputStream pis = new PipedInputStream(pos);
-        System.setIn(pis);
-    }
-
-    @AfterEach
-    public void afterEach() {
-        System.setOut(originalOut);
-        System.setIn(originalIn);
     }
 
     @Test
@@ -77,7 +50,6 @@ public class AppControllerTest {
         controller.setArticles(articles);
         assertEquals(articles.size(), controller.getArticleCount());
 
-
     }
 
     @Test
@@ -89,7 +61,6 @@ public class AppControllerTest {
         assertEquals(0, controller.getArticleCount());
 
     }
-
 
     @Test
     public void getTopHeadlinesAustria1() {
