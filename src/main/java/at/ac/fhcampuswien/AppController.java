@@ -60,7 +60,8 @@ public class AppController {
         Article four = new Article("The New York Times", "The Bitcoin Case That Puzzled the Shadowy World of Cryptocurrency");
         articles.add(four);
         return articles;
-    }}
+    }
+}
 
 
 

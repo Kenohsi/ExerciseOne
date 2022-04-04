@@ -1,15 +1,13 @@
 package at.ac.fhcampuswien;
 
-
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-
+import javafx.scene.image.ImageView;
 
 public class NewsAppFx extends AppController {
 
 
     public Label Labelonee;
+    public ImageView Background;
 
 
     public void BitcoinNews() {

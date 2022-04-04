@@ -50,7 +50,7 @@ public class Menu {
     }
 
     private void getArticleCount(AppController controller) {
-        System.out.println("Number of articles: "+controller.getArticleCount());
+        System.out.println("Number of articles: " + controller.getArticleCount());
     }
 
     private void getTopHeadlinesAustria(AppController controller) {

@@ -1,11 +1,12 @@
 package at.ac.fhcampuswien;
 
-import at.ac.fhcampuswien.AppController;
-import at.ac.fhcampuswien.Article;
+
 import org.junit.jupiter.api.*;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
