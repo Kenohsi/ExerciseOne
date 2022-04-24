@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.TextArea;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.security.cert.PolicyNode;
