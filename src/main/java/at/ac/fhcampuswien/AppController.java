@@ -1,18 +1,16 @@
 package at.ac.fhcampuswien;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
+
     private List<Article> articles;
     public String query = "Bitcoin";
-
 
     public AppController() {
         this.articles = generateMockList();
     }
-
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
@@ -24,12 +22,10 @@ public class AppController {
         } else {
             return articles.size();
         }
-
     }
 
     public List<Article> getTopHeadlinesAustria() {
         return generateMockList();
-
     }
 
 
@@ -38,7 +34,8 @@ public class AppController {
         return filterList(query, articles);
     }
 
-    protected List<Article> filterList(String query, List<Article> articles) {
+
+    protected List<Article> filterList(String query, List<Article> articles) {  // Searching for query in every article
         List<Article> rem_article = new ArrayList<>();
         for (Article a : articles) {
             if (a.getTitle().toLowerCase().contains(query.toLowerCase())) {
@@ -49,7 +46,7 @@ public class AppController {
         return rem_article;
     }
 
-    private List<Article> generateMockList() { // was set to public for javaFX
+    private List<Article> generateMockList() { // Mocklist List of random articles
         List<Article> articles = new ArrayList();
         Article one = new Article("Steve Rosenberg ", "Ukraine war: Russians grieve for fallen soldiers");
         articles.add(one);
@@ -60,7 +57,8 @@ public class AppController {
         Article four = new Article("The New York Times", "The Bitcoin Case That Puzzled the Shadowy World of Cryptocurrency");
         articles.add(four);
         return articles;
-    }}
+    }
+}
 
 
 
