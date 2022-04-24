@@ -6,6 +6,8 @@ import com.google.gson.Gson;
 
 public class NewsApi {
 
+    //brate
+
     private static final String API_KEY = "fccf5f95aebd4f5f921ce51486d46e1b";
     private static final OkHttpClient client = new OkHttpClient();
     public static final String url = "https://newsapi.org/";
