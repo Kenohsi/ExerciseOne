@@ -4,12 +4,11 @@ module com.example.exerasixc {
     requires java.desktop;
     requires com.google.gson;
     requires okhttp3;
+    requires javafx.graphics;
 
 
     exports at.ac.fhcampuswien.Enum;
     opens at.ac.fhcampuswien.Enum to javafx.fxml;
-
-
     opens at.ac.fhcampuswien to javafx.fxml;
     exports at.ac.fhcampuswien;
 }

@@ -1,11 +1,18 @@
 package at.ac.fhcampuswien.Enum;
 
 public enum Category {
-    business,
-    entertainment,
-    general,
-    health,
-    science,
-    sports,
-    technology,
+    BUSINESS("business"),
+    ENTERTAINMENT("entertainment"),
+    GENERAL("general"),
+    HEALTH("health"),
+    SCIENCE("science"),
+    SPORTS("sports"),
+    TECHNOLOGY("technology");
+
+    public final String Categories;
+
+    Category (String Categories) {
+
+        this.Categories=Categories;
+    }
 }

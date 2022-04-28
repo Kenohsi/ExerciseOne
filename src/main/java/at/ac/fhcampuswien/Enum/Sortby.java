@@ -1,5 +1,14 @@
 package at.ac.fhcampuswien.Enum;
 
 public enum Sortby {
-    relevancy, popularity, publishedAt,
+    RELEVANCY("relevancy"),
+    POPULARITY("popularity"),
+    PUBLISHEDAT("publishedAt");
+
+    public final String sortby;
+
+    Sortby (String sortby) {
+
+        this.sortby=sortby;
+    }
 }
