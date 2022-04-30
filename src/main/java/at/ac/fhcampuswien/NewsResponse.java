@@ -20,8 +20,8 @@ public class NewsResponse {
     public int getTotalResults() {
         return totalResults;
     }
+
     public List<Article> getArticles(){
         return articles;
-
     }
 }

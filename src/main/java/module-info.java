@@ -7,8 +7,9 @@ module com.example.exerasixc {
     requires javafx.graphics;
 
 
-    exports at.ac.fhcampuswien.Enum;
-    opens at.ac.fhcampuswien.Enum to javafx.fxml;
-    opens at.ac.fhcampuswien to javafx.fxml;
+
     exports at.ac.fhcampuswien;
+    exports at.ac.fhcampuswien.Enum;
+    opens at.ac.fhcampuswien.Enum to com.google.gson, javafx.fxml;
+    opens at.ac.fhcampuswien to javafx.fxml, com.google.gson;
 }

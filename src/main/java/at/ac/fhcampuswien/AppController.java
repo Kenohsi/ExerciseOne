@@ -1,12 +1,16 @@
 package at.ac.fhcampuswien;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AppController {
+import at.ac.fhcampuswien.Enum.Category;
+import at.ac.fhcampuswien.Enum.Country;
+import at.ac.fhcampuswien.Enum.Endpoint;
 
+public class AppController {
     private List<Article> articles;
-    public String query = "Bitcoin";
+
 
     public AppController() {
         this.articles = generateMockList();
@@ -24,18 +28,26 @@ public class AppController {
         }
     }
 
-    public List<Article> getTopHeadlinesAustria() {
-        return generateMockList();
+    public NewsResponse getTopHeadlinesAustria() throws IOException {
+        NewsApi newsApi = new NewsApi();
+        newsApi.urlBuilder(Endpoint.TOP_HEADLINES.Endpoints, "", Country.AUSTRIA.Countries);
+        String Json = newsApi.run(newsApi.getAPIURL());
+        newsApi.getResponseArticles(Json);
+        return newsApi.getResponseArticles(Json);
     }
 
 
-    public List<Article> getAllNewsBitcoin() {
+    public NewsResponse getAllNewsBitcoin() throws IOException {
 
-        return filterList(query, articles);
+        NewsApi newsApi = new NewsApi();
+        newsApi.urlBuilder(Endpoint.EVERYTHING.Endpoints, "bitcoin");
+        String Json = newsApi.run(newsApi.getAPIURL());
+        newsApi.getResponseArticles(Json);
+        return newsApi.getResponseArticles(Json);
     }
 
 
-    protected List<Article> filterList(String query, List<Article> articles) {  // Searching for query in every article
+    protected static List<Article> filterList(String query, List<Article> articles) {  // Searching for query in every article
         List<Article> rem_article = new ArrayList<>();
         for (Article a : articles) {
             if (a.getTitle().toLowerCase().contains(query.toLowerCase())) {

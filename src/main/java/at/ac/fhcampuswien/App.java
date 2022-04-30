@@ -19,6 +19,7 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("NewsApp.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1213, 460);
         stage.setTitle("NewsApp from NetSquad!");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }

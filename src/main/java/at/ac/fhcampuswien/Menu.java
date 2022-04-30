@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
@@ -13,13 +14,13 @@ public class Menu {
         this.EXIT_MESSAGE = "Bye Bye!";
     }
 
-    public void start() {
+    public void start() throws IOException {
         controller = new AppController();
         printMenu();
         handleInput("");
     }
 
-    private void handleInput(String Input) {
+    private void handleInput(String Input) throws IOException {
         Scanner sc = new Scanner(System.in);
         Input = String.valueOf(sc.next().charAt(0));
         switch (Input) {
@@ -49,15 +50,19 @@ public class Menu {
 
     }
 
-    private void getArticleCount(AppController controller) {
-        System.out.println("Number of articles: " + controller.getArticleCount());
+    private void getArticleCount(AppController controller) throws IOException {
+        int Allnews;
+        Allnews = controller.getTopHeadlinesAustria().getArticles().size();
+        int Bitcoinnews;
+        Bitcoinnews = controller.getAllNewsBitcoin().getArticles().size();
+        System.out.println("Number of articles: " + (Bitcoinnews + Allnews));
     }
 
-    private void getTopHeadlinesAustria(AppController controller) {
+    private void getTopHeadlinesAustria(AppController controller) throws IOException {
         System.out.println(controller.getTopHeadlinesAustria());
     }
 
-    private void getAllNewsBitcoin(AppController controller) {
+    private void getAllNewsBitcoin(AppController controller) throws IOException {
         System.out.println(controller.getAllNewsBitcoin());
     }
 

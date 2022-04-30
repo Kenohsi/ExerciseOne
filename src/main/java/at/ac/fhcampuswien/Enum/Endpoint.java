@@ -2,9 +2,9 @@ package at.ac.fhcampuswien.Enum;
 
 public enum Endpoint {
     EVERYTHING("everything"),
-    TOPHEADLINES("top-headlines");
+    TOP_HEADLINES("top-headlines");
 
-    private String Endpoints;
+    public final String Endpoints;
 
     Endpoint(String Endpoints) {
 
