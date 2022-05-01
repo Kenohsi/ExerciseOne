@@ -36,6 +36,8 @@ public class AppController {
 
         NewsApi.query = "Corona";
         NewsApi.endpoint = Endpoint.topHeadlines;
+        NewsApi.country = null;
+        NewsApi.category = null;
         NewsResponse response = NewsApi.run();
        return response.getArticles() != null ? response.getArticles(): new ArrayList<>();
 
@@ -46,6 +48,7 @@ public class AppController {
         NewsApi.query = "bitcoin";
         NewsApi.endpoint = Endpoint.everything;
         NewsApi.country = null;
+        NewsApi.category = null;
         NewsResponse response =  NewsApi.run();
         return response.getArticles() != null ? response.getArticles(): new ArrayList<>();
     }

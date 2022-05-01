@@ -18,7 +18,8 @@ public enum Language {
     public final String Languages;
 
     Language (String Languages) {
-
         this.Languages=Languages;
     }
-}
+    public String getLanguages(){
+        return Languages;
+}}

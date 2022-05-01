@@ -64,4 +64,7 @@ public enum Country {
 
         this.Countries=Countries;
     }
+    public String getCountries(){
+        return Countries;
+    }
 }

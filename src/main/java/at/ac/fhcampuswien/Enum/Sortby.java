@@ -8,7 +8,6 @@ public enum Sortby {
     public final String sortby;
 
     Sortby (String sortby) {
-
         this.sortby=sortby;
     }
 }

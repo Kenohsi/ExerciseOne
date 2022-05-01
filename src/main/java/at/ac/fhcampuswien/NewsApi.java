@@ -1,6 +1,8 @@
 package at.ac.fhcampuswien;
 import okhttp3.*;
 import java.io.IOException;
+import java.util.Objects;
+
 import com.google.gson.Gson;
 import at.ac.fhcampuswien.Enum.*;
 public class NewsApi {
@@ -18,10 +20,9 @@ public class NewsApi {
 
     public static NewsResponse run() throws IOException {
 
-        HttpUrl.Builder builder = HttpUrl.parse(APIUrl).newBuilder();
+        HttpUrl.Builder builder = Objects.requireNonNull(HttpUrl.parse(APIUrl)).newBuilder();
         builder.addPathSegment("v2");
         builder.addPathSegment((endpoint.getEndpoints()));
-
         builder.addQueryParameter("q", query);
         builder.addQueryParameter("apiKey", API_KEY);
 
@@ -42,13 +43,10 @@ public class NewsApi {
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
-
             Gson gson = new Gson();
-
             if (!response.isSuccessful()) throw new IOException("Unexpected Error" + response);
             else {
-                return gson.fromJson(response.body().string(), NewsResponse.class);
-
+                return gson.fromJson(Objects.requireNonNull(response.body()).string(), NewsResponse.class);
             }
     }}}
 

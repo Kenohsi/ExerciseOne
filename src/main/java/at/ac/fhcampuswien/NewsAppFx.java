@@ -1,6 +1,6 @@
 package at.ac.fhcampuswien;
 
-import at.ac.fhcampuswien.Enum.Endpoint;
+
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
@@ -11,12 +11,10 @@ import java.util.StringJoiner;
 
 public class NewsAppFx extends AppController {
 
-
-
     public Label Labelonee;
     public ImageView Background;
     private final AppController controller = new AppController();
-    private List <Article> articles = new ArrayList<Article>();
+    private List <Article> articles = new ArrayList<>();
 
     public void BitcoinNews() throws IOException {
         StringJoiner joiner = new StringJoiner("\n\n");
@@ -26,9 +24,7 @@ public class NewsAppFx extends AppController {
             joiner.add(article.toString());
         }
         Labelonee.setText(joiner.toString());
-
     }
-
     public void AllNews() throws IOException {
         StringJoiner joiner = new StringJoiner("\n\n");
         articles = controller.getTopHeadlinesAustria();
@@ -36,11 +32,8 @@ public class NewsAppFx extends AppController {
             joiner.add(article.toString());
         }
         Labelonee.setText(joiner.toString());
-
     }
-
     public void ArticleCount() throws IOException {
-
         Labelonee.setText("We have " + ( getArticleCount() ) + " articles available.");
     }
     }

@@ -49,15 +49,12 @@ public class Menu {
         }
 
     }
-
     private void getArticleCount(AppController controller) throws IOException {
         System.out.println("Number of articles: " + (controller.getArticleCount()));
     }
-
     private void getTopHeadlinesAustria(AppController controller) throws IOException {
         System.out.println(controller.getTopHeadlinesAustria());
     }
-
     private void getAllNewsBitcoin(AppController controller) throws IOException {
         System.out.println(controller.getAllNewsBitcoin());
     }
