@@ -45,7 +45,7 @@ public class NewsApi {
 
             Gson gson = new Gson();
 
-            if (!response.isSuccessful()) throw new IOException("Something went wrong" + response);
+            if (!response.isSuccessful()) throw new IOException("Unexpected Error" + response);
             else {
                 return gson.fromJson(response.body().string(), NewsResponse.class);
 
