@@ -20,30 +20,34 @@ public class AppController {
         this.articles = articles;
     }
 
-    public int getArticleCount() {
+    public int getArticleCount() throws IOException {
         if (articles == null) {
             return 0;
         } else {
-            return articles.size();
+            int Count1;
+            int Count2;
+            Count1 = getAllNewsBitcoin().size();
+            Count2 = getTopHeadlinesAustria().size();
+            return Count1+Count2;
         }
     }
 
-    public NewsResponse getTopHeadlinesAustria() throws IOException {
-        NewsApi newsApi = new NewsApi();
-        newsApi.urlBuilder(Endpoint.TOP_HEADLINES.Endpoints, "", Country.AUSTRIA.Countries);
-        String Json = newsApi.run(newsApi.getAPIURL());
-        newsApi.getResponseArticles(Json);
-        return newsApi.getResponseArticles(Json);
+    public List<Article> getTopHeadlinesAustria() throws IOException {
+
+        NewsApi.query = "Corona";
+        NewsApi.endpoint = Endpoint.topHeadlines;
+        NewsResponse response = NewsApi.run();
+       return response.getArticles() != null ? response.getArticles(): new ArrayList<>();
+
     }
 
 
-    public NewsResponse getAllNewsBitcoin() throws IOException {
-
-        NewsApi newsApi = new NewsApi();
-        newsApi.urlBuilder(Endpoint.EVERYTHING.Endpoints, "bitcoin");
-        String Json = newsApi.run(newsApi.getAPIURL());
-        newsApi.getResponseArticles(Json);
-        return newsApi.getResponseArticles(Json);
+    public List<Article> getAllNewsBitcoin() throws IOException {
+        NewsApi.query = "bitcoin";
+        NewsApi.endpoint = Endpoint.everything;
+        NewsApi.country = null;
+        NewsResponse response =  NewsApi.run();
+        return response.getArticles() != null ? response.getArticles(): new ArrayList<>();
     }
 
 

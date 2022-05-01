@@ -51,11 +51,7 @@ public class Menu {
     }
 
     private void getArticleCount(AppController controller) throws IOException {
-        int Allnews;
-        Allnews = controller.getTopHeadlinesAustria().getArticles().size();
-        int Bitcoinnews;
-        Bitcoinnews = controller.getAllNewsBitcoin().getArticles().size();
-        System.out.println("Number of articles: " + (Bitcoinnews + Allnews));
+        System.out.println("Number of articles: " + (controller.getArticleCount()));
     }
 
     private void getTopHeadlinesAustria(AppController controller) throws IOException {

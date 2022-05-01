@@ -45,7 +45,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void getArticleCount1() {
+    public void getArticleCount1() throws IOException {
         //to check if the article count is equal to amount of articles in the list.
         List<Article> articles = new ArrayList<>();
         AppController controller = new AppController();
@@ -55,7 +55,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void getArticleCount2() {
+    public void getArticleCount2() throws IOException {
         //When the article count is 0.
         List<Article> articles = new ArrayList<>();
         AppController controller = new AppController();

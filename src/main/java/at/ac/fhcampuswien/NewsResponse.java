@@ -13,6 +13,8 @@ public class NewsResponse {
         this.articles = articles;
     }
 
+
+
     public String getStatus() {
         return status;
     }

@@ -1,13 +1,16 @@
 package at.ac.fhcampuswien.Enum;
 
 public enum Endpoint {
-    EVERYTHING("everything"),
-    TOP_HEADLINES("top-headlines");
+    everything("everything"),
+    topHeadlines("top-headlines");
 
-    public final String Endpoints;
+    private final String Endpoints;
 
     Endpoint(String Endpoints) {
 
         this.Endpoints = Endpoints;
+    }
+    public String getEndpoints(){
+        return Endpoints;
     }
 }

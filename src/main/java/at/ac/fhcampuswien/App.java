@@ -2,16 +2,12 @@ package at.ac.fhcampuswien;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.control.TextArea;
-//import org.testng.annotations.Test;
+
 
 import java.io.IOException;
-import java.security.cert.PolicyNode;
-import java.util.Objects;
+
 
 public class App extends Application {
     @Override

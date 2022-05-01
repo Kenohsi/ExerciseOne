@@ -1,11 +1,13 @@
 package at.ac.fhcampuswien;
 
+import at.ac.fhcampuswien.Enum.Endpoint;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class NewsAppFx extends AppController {
 
@@ -14,34 +16,32 @@ public class NewsAppFx extends AppController {
     public Label Labelonee;
     public ImageView Background;
     private final AppController controller = new AppController();
-
-
-    public void setOutputText(String text){
-        Labelonee.setText(text);
-    }
+    private List <Article> articles = new ArrayList<Article>();
 
     public void BitcoinNews() throws IOException {
-        setOutputText(controller.getAllNewsBitcoin().getArticles().toString());
+        StringJoiner joiner = new StringJoiner("\n\n");
+
+        articles = controller.getAllNewsBitcoin();
+        for (Article article: articles) {
+            joiner.add(article.toString());
+        }
+        Labelonee.setText(joiner.toString());
+
     }
 
     public void AllNews() throws IOException {
-            setOutputText((controller.getTopHeadlinesAustria().getArticles().toString()));
+        StringJoiner joiner = new StringJoiner("\n\n");
+        articles = controller.getTopHeadlinesAustria();
+        for (Article article: articles) {
+            joiner.add(article.toString());
+        }
+        Labelonee.setText(joiner.toString());
+
     }
 
-    public void ArticleCount() {
+    public void ArticleCount() throws IOException {
 
-        int austriaCount = 0;
-        int bitcoinCount = 0;
-
-        try {
-            austriaCount = controller.getTopHeadlinesAustria().getArticles().size();
-            bitcoinCount = controller.getAllNewsBitcoin().getArticles().size();
-
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
-
-        setOutputText("Number of articles: " + (austriaCount + bitcoinCount));
+        Labelonee.setText("We have " + ( getArticleCount() ) + " articles available.");
     }
     }
 
