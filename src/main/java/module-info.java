@@ -5,7 +5,7 @@ module com.example.exerasixc {
     requires com.google.gson;
     requires okhttp3;
     requires javafx.graphics;
-
+    requires java.dotenv;
 
 
     exports at.ac.fhcampuswien;

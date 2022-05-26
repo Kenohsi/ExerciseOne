@@ -1,4 +1,5 @@
 package at.ac.fhcampuswien;
+import io.github.cdimascio.dotenv.Dotenv;
 import okhttp3.*;
 import java.io.IOException;
 import java.util.Objects;
@@ -8,7 +9,7 @@ import at.ac.fhcampuswien.Enum.*;
 public class NewsApi {
 
 
-    private static final String API_KEY = "fccf5f95aebd4f5f921ce51486d46e1b";
+    private static final String API_KEY = Dotenv.load().get("API_TOKEN");
     private static final OkHttpClient client = new OkHttpClient();
     private static final String APIUrl = "https://newsapi.org/";
     public static Category category;

@@ -32,9 +32,9 @@ public class AppController {
         }
     }
 
-    public List<Article> getTopHeadlinesAustria() throws IOException {
+    public List<Article> getTopHeadlinesAustria() throws IOException,NullPointerException {
 
-        NewsApi.query = "Corona";
+        NewsApi.query = "bitcoin";
         NewsApi.endpoint = Endpoint.topHeadlines;
         NewsApi.country = null;
         NewsApi.category = null;
@@ -45,7 +45,7 @@ public class AppController {
 
 
     public List<Article> getAllNewsBitcoin() throws IOException {
-        NewsApi.query = "bitcoin";
+        NewsApi.query = "corona";
         NewsApi.endpoint = Endpoint.everything;
         NewsApi.country = null;
         NewsApi.category = null;

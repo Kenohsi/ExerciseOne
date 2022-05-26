@@ -29,6 +29,27 @@ public class Article {
         this.publishedAt = publishedAt;
         this.content = content;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public String getUrlToImage() {
+        return urlToImage;
+    }
+
+    public String getPublishedAt() {
+        return publishedAt;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
     public String getAuthor() {
         return this.author;
     }
@@ -37,6 +58,6 @@ public class Article {
     }
     @Override
     public String toString() {
-        return "Author: " + author + System.lineSeparator() + "Title: " + title;
+        return "Author: " + getAuthor() + System.lineSeparator() + "Title: " + getTitle();
     }
 }
