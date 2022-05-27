@@ -45,7 +45,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void getArticleCount1() throws IOException {
+    public void getArticleCount1() throws IOException, NullPointerException, NewsApiException {
         //to check if the article count is equal to amount of articles in the list.
         List<Article> articles = new ArrayList<>();
         AppController controller = new AppController();
@@ -55,7 +55,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void getArticleCount2() throws IOException {
+    public void getArticleCount2() throws IOException, NullPointerException, NewsApiException {
         //When the article count is 0.
         List<Article> articles = new ArrayList<>();
         AppController controller = new AppController();
@@ -88,7 +88,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void getTopHeadlinesAustria2() throws IOException {
+    public void getTopHeadlinesAustria2() throws IOException, NullPointerException, NewsApiException {
         //to check if our list is returning the right amount when we call upon this method.
         List<Article> articles;
         AppController controller = new AppController();
@@ -107,7 +107,7 @@ public class AppControllerTest {
 
 
     @Test
-    public void getAllNewsBitcoin1() throws IOException {
+    public void getAllNewsBitcoin1() throws IOException, NullPointerException, NewsApiException {
         //to check if the method is returning what is expected of it to return all bitcoin news.
 
         List<Article> articles;
@@ -122,7 +122,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void getAllNewsBitcoin2() throws IOException {
+    public void getAllNewsBitcoin2() throws IOException, NullPointerException, NewsApiException {
         //to check if the method is returning the amount that is supposed to come out when we call upon this method.
         List<Article> articles;
         AppController controller = new AppController();

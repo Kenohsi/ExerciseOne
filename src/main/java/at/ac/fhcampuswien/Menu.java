@@ -17,10 +17,14 @@ public class Menu {
     public void start() throws IOException {
         controller = new AppController();
         printMenu();
-        handleInput("");
+        try {
+            handleInput("");
+        } catch (NewsApiException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void handleInput(String Input) throws IOException {
+    private void handleInput(String Input) throws IOException, NewsApiException {
         Scanner sc = new Scanner(System.in);
         Input = String.valueOf(sc.next().charAt(0));
         switch (Input) {
@@ -49,13 +53,13 @@ public class Menu {
         }
 
     }
-    private void getArticleCount(AppController controller) throws IOException {
+    private void getArticleCount(AppController controller) throws IOException, NewsApiException {
         System.out.println("Number of articles: " + (controller.getArticleCount()));
     }
-    private void getTopHeadlinesAustria(AppController controller) throws IOException {
+    private void getTopHeadlinesAustria(AppController controller) throws IOException, NewsApiException {
         System.out.println(controller.getTopHeadlinesAustria());
     }
-    private void getAllNewsBitcoin(AppController controller) throws IOException {
+    private void getAllNewsBitcoin(AppController controller) throws IOException, NewsApiException {
         System.out.println(controller.getAllNewsBitcoin());
     }
 

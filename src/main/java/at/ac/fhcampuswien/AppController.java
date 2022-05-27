@@ -1,12 +1,14 @@
 package at.ac.fhcampuswien;
 
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
 import at.ac.fhcampuswien.Enum.Category;
 import at.ac.fhcampuswien.Enum.Country;
 import at.ac.fhcampuswien.Enum.Endpoint;
+import at.ac.fhcampuswien.Enum.Sortby;
 
 public class AppController {
     private List<Article> articles;
@@ -20,7 +22,7 @@ public class AppController {
         this.articles = articles;
     }
 
-    public int getArticleCount() throws IOException {
+    public int getArticleCount() throws IOException,NullPointerException,NewsApiException {
         if (articles == null) {
             return 0;
         } else {
@@ -32,23 +34,26 @@ public class AppController {
         }
     }
 
-    public List<Article> getTopHeadlinesAustria() throws IOException,NullPointerException {
+    public List<Article> getTopHeadlinesAustria() throws IOException,NullPointerException,NewsApiException {
 
-        NewsApi.query = "bitcoin";
+        NewsApi.query = "corona";
         NewsApi.endpoint = Endpoint.topHeadlines;
         NewsApi.country = null;
-        NewsApi.category = null;
+        NewsApi.category = Category.HEALTH;
+        NewsApi.sortby = null;
         NewsResponse response = NewsApi.run();
        return response.getArticles() != null ? response.getArticles(): new ArrayList<>();
 
+    
     }
 
 
-    public List<Article> getAllNewsBitcoin() throws IOException {
-        NewsApi.query = "corona";
+    public List<Article> getAllNewsBitcoin() throws IOException,NullPointerException,NewsApiException {
+        NewsApi.query = "bitcoin";
         NewsApi.endpoint = Endpoint.everything;
         NewsApi.country = null;
         NewsApi.category = null;
+        NewsApi.sortby = null;
         NewsResponse response =  NewsApi.run();
         return response.getArticles() != null ? response.getArticles(): new ArrayList<>();
     }
