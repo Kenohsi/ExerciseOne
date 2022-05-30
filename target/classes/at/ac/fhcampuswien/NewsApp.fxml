@@ -17,7 +17,7 @@
                 <ImageView fx:id="Background" fitHeight="457.0" fitWidth="1210.0">
                     <Image url="@download.jpg" />
                 </ImageView>
-                <Label fx:id="Labelonee" alignment="CENTER" layoutX="195.0" layoutY="86.0" prefHeight="367.0" prefWidth="863.0" text="Your favourite news here!" textFill="RED">
+                <Label fx:id="Labelonee" alignment="CENTER" layoutX="190.0" layoutY="89.0" prefHeight="367.0" prefWidth="863.0" text="Your favourite news here!" textFill="RED">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="10.0" />
                     </font>
@@ -27,18 +27,18 @@
                         <Font name="Arial Rounded MT Bold" size="39.0" />
                     </font>
                 </Label>
-                <AnchorPane layoutX="6.0" minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="158.0">
-                    <Button layoutX="2.0" layoutY="151.0" mnemonicParsing="false" onAction="#AllNews" prefHeight="62.0" prefWidth="154.0" text="Headlines" textFill="RED" textOverrun="CENTER_WORD_ELLIPSIS">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="158.0">
+                    <Button layoutX="2.0" layoutY="197.0" mnemonicParsing="false" onAction="#AllNews" prefHeight="62.0" prefWidth="154.0" text="Headlines" textFill="RED" textOverrun="CENTER_WORD_ELLIPSIS">
                         <font>
                             <Font name="Arial Rounded MT Bold" size="18.0" />
                         </font>
                     </Button>
-                    <Button layoutX="2.0" layoutY="251.0" mnemonicParsing="false" onAction="#BitcoinNews" prefHeight="62.0" prefWidth="154.0" text="Bitcoin News" textFill="RED">
+                    <Button layoutX="2.0" layoutY="290.0" mnemonicParsing="false" onAction="#BitcoinNews" prefHeight="62.0" prefWidth="154.0" text="Bitcoin News" textFill="RED">
                         <font>
                             <Font name="Arial Rounded MT Bold" size="18.0" />
                         </font>
                     </Button>
-                    <Button layoutX="2.0" layoutY="358.0" mnemonicParsing="false" onAction="#ArticleCount" prefHeight="62.0" prefWidth="154.0" text="Article Count" textFill="RED">
+                    <Button layoutX="2.0" layoutY="387.0" mnemonicParsing="false" onAction="#ArticleCount" prefHeight="62.0" prefWidth="154.0" text="Article Count" textFill="RED">
                         <font>
                             <Font name="Arial Rounded MT Bold" size="18.0" />
                         </font>
@@ -46,6 +46,11 @@
                             <Blend mode="LIGHTEN" />
                         </effect>
                     </Button>
+               <Button layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#mostArticles" prefHeight="25.0" prefWidth="85.0" text="Most Articles" />
+               <Button layoutX="37.0" layoutY="78.0" mnemonicParsing="false" onAction="#LongestAuthorName" prefHeight="25.0" prefWidth="85.0" text="Author" />
+               <Button layoutX="37.0" layoutY="43.0" mnemonicParsing="false" onAction="#NewYorkTimesfilter" prefHeight="25.0" prefWidth="85.0" text="NYT" />
+               <Button layoutX="36.0" layoutY="111.0" mnemonicParsing="false" onAction="#LessthanfifteenChars" prefHeight="25.0" prefWidth="85.0" text="15 Chars" />
+               <Button layoutX="35.0" layoutY="146.0" mnemonicParsing="false" onAction="#sorted" prefHeight="25.0" prefWidth="85.0" text="Sorted" />
                 </AnchorPane>
             </AnchorPane>
         </SplitPane>

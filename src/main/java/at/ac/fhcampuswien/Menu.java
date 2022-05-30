@@ -1,6 +1,7 @@
 package at.ac.fhcampuswien;
 
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class Menu {
@@ -24,7 +25,7 @@ public class Menu {
         }
     }
 
-    private void handleInput(String Input) throws IOException, NewsApiException {
+    private void handleInput(String Input) throws IOException, NewsApiException,NullPointerException{
         Scanner sc = new Scanner(System.in);
         Input = String.valueOf(sc.next().charAt(0));
         switch (Input) {
@@ -53,13 +54,13 @@ public class Menu {
         }
 
     }
-    private void getArticleCount(AppController controller) throws IOException, NewsApiException {
+    private void getArticleCount(AppController controller) throws IOException, NewsApiException,NullPointerException {
         System.out.println("Number of articles: " + (controller.getArticleCount()));
     }
-    private void getTopHeadlinesAustria(AppController controller) throws IOException, NewsApiException {
+    private void getTopHeadlinesAustria(AppController controller) throws IOException, NewsApiException,NullPointerException {
         System.out.println(controller.getTopHeadlinesAustria());
     }
-    private void getAllNewsBitcoin(AppController controller) throws IOException, NewsApiException {
+    private void getAllNewsBitcoin(AppController controller) throws IOException, NewsApiException,NullPointerException {
         System.out.println(controller.getAllNewsBitcoin());
     }
 

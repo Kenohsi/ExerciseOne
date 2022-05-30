@@ -39,6 +39,7 @@ public class NewsApi {
         if (language != null) {
             builder.addQueryParameter("language", language.toString());
         }
+          //System.out.println(builder.build());
         Request request = new Request.Builder()
                 .url(builder.build().toString())
                 .build();
@@ -51,49 +52,11 @@ public class NewsApi {
             }
     }}}
 
+        //Error Messages that we could implement -HTTP status codes summary
+         //200 — OK. The request was executed successfully.
+         //400 — Bad Request. The request was unacceptable, often due to a missing or misconfigured parameter.
+         //401 — Unauthorized. Your API key was missing from the request, or wasn’t correct.
+         //429 — Too Many Requests. You made too many requests within a window of time and have been rate limited. Back off for a while.
+         //500 — Server Error. Something went wrong on our side.
 
 
-
-     /*
-    public NewsResponse getResponseArticles(String Json) {
-        return new Gson().fromJson(Json, NewsResponse.class);
-
-
-    }
-    }
-
-    public String getAPIURL(){
-        return APIUrl;
-    }
-
-    public void setAPIUrl(String APIUrl) {
-        NewsApi.APIUrl = APIUrl;
-    }
-
-    public void urlBuilder(String endpoint, String query, String country, String sortBy, String category) {
-        String build = APIUrl+endpoint+"?q="+query+"&country="+country+"&sortBy="+sortBy+"&category"+category+"&apiKey="+API_KEY;
-        setAPIUrl(build);
-    }
-
-    public void urlBuilder(String endpoint, String query, String country, String sortBy) {
-        String build = APIUrl+endpoint+"?q="+query+"&country="+country+"&sortBy="+sortBy+"&apiKey="+API_KEY;
-        setAPIUrl(build);
-    }
-
-    public void urlBuilder(String endpoint, String query, String country) {
-        String build = APIUrl+endpoint+"?q="+query+"&country="+country+"&apiKey="+API_KEY;
-        setAPIUrl(build);
-    }
-
-    public void urlBuilder(String endpoint, String query) {
-        String build = APIUrl+endpoint+"?q="+query+"&apiKey="+API_KEY;
-        setAPIUrl(build);
-    }
-
-
-    }
-
-
-}
-
-      */
